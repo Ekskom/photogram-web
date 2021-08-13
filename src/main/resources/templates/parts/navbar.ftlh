@@ -39,11 +39,11 @@
                             <a class="nav-link active" href="/main?filter=Architecture">Architecture</a>
                         </li>
 
-
+                        <#if isAdmin>
                             <li class="nav-item">
                                 <a class="nav-link active" href="/user">User list</a>
                             </li>
-
+                        </#if>
                     </ul>
                 </div>
 
