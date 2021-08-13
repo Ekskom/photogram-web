@@ -43,7 +43,7 @@
                             <li class="nav-item">
                                 <a class="nav-link active" href="/user">User list</a>
                             </li>
-                       
+
                     </ul>
                 </div>
 

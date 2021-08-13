@@ -8,9 +8,6 @@ import org.springframework.mail.javamail.JavaMailSenderImpl;
 
 import java.util.Properties;
 
-/**
- * Created by 38093 on 29.07.2021.
- */
 @Configuration
 public class MailConfig {
     @Value("${spring.mail.host}")
