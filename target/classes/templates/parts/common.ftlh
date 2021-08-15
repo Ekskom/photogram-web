@@ -155,11 +155,10 @@
                 justify-content: center;
                 flex-wrap: wrap;
             }
-            .post-item {
-                padding: 10px;
-            }
+
             .post-item-wrap {
-                position: absolute;
+                margin-bottom: 10px;
+                position: relative;
             }
             .post-item img {
                 display: block;
@@ -219,8 +218,6 @@
                 align-items: center;
             }
             .post-date:after {
-
-
                 font-size: 14px;
             }
             .post-title {
@@ -358,7 +355,8 @@
             .example-2 .input-file + .js-labelFile.has-file .icon:before{content:"\f00c";color:#5AAC7B}
 
             .alert {
-                position: relative;
+                margin-top: 20px;
+                position: absolute;
                 padding: .75rem 1.25rem;
                 margin-bottom: 1rem;
                 border: 1px solid transparent;

@@ -6,18 +6,17 @@
 
 
     <i class="far fa-user"></i>
-    <h6> ${userChannel.username}</h6>
-    <#if !isCurrentUser>
-        <#if isSubscriber>
-             <a class="btn btn-info" href="/user/subscribe/${userChannel.id}">Unsubscribe</a>
-        <#else>
-             <a class="btn btn-info" href="/user/subscribe/${userChannel.id}">Subscribe</a>
-        </#if>
-    </#if>
+    <h6 class="mt-5"> ${userChannel.username}</h6>
     <div class="container">
         <div class="row">
             <div class="col">
-
+                <#if !isCurrentUser>
+                    <#if isSubscriber>
+                        <a class="btn btn-info" href="/user/subscribe/${userChannel.id}">Unsubscribe</a>
+                        <#else>
+                            <a class="btn btn-info" href="/user/subscribe/${userChannel.id}">Subscribe</a>
+                    </#if>
+                </#if>
 
                     <a class="btn btn-dark mr-2" href="/user/subscriptions/${userChannel.id}/list">Subscriptions: ${subscriptionsCount}</a>
 
