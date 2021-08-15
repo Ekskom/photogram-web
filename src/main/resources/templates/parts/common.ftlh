@@ -358,7 +358,7 @@
             .example-2 .input-file + .js-labelFile.has-file .icon:before{content:"\f00c";color:#5AAC7B}
 
             .alert {
-                position: absolute;
+                position: relative;
                 padding: .75rem 1.25rem;
                 margin-bottom: 1rem;
                 border: 1px solid transparent;
