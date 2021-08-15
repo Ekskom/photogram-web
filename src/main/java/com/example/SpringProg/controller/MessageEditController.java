@@ -1,10 +1,12 @@
 package com.example.SpringProg.controller;
 
+
 import com.example.SpringProg.domain.Message;
 import com.example.SpringProg.domain.User;
 import com.example.SpringProg.domain.dto.MessageDto;
 import com.example.SpringProg.repo.MessageRepo;
 import com.example.SpringProg.service.MessageService;
+import com.example.SpringProg.service.StorageService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
@@ -28,13 +30,14 @@ import java.util.Set;
 public class MessageEditController {
 
     @Autowired
+    private StorageService storageService;
+
+    @Autowired
     private MessageRepo messageRepo;
 
     @Autowired
     private MessageService messageService;
 
-    @Autowired
-    private MainController mainController;
 
 
     @GetMapping("/user-messages/{author}")
@@ -74,6 +77,8 @@ public class MessageEditController {
             @RequestParam("file") MultipartFile file
     ) throws IOException {
 
+
+
         boolean isTagEmpty = ObjectUtils.isEmpty(message.getTag());
 
         if (isTagEmpty) {
@@ -101,7 +106,7 @@ public class MessageEditController {
                     message.setTag(tag);
                 }
 
-                mainController.saveFile(id, file);
+                storageService.uploadFile(message, file);
 
                 messageRepo.save(id);
             }

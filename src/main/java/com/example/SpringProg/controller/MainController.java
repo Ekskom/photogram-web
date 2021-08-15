@@ -1,5 +1,7 @@
 package com.example.SpringProg.controller;
 
+import com.amazonaws.services.s3.AmazonS3;
+import com.amazonaws.services.s3.model.PutObjectRequest;
 import com.example.SpringProg.domain.Message;
 import com.example.SpringProg.domain.User;
 import com.example.SpringProg.domain.dto.MessageDto;
@@ -16,11 +18,23 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import javax.validation.Valid;
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.*;
 
 @Controller
 public class MainController {
+
+    @Value("my-new-bucket-photogram")
+    private String bucketName;
+
+    @Autowired
+    private AmazonS3 s3;
+
+
+    @Value("AKIAXJNB7PKMCJFK2BUH")
+    private String accessKey;
+
 
     @Autowired
     private MessageRepo messageRepo;
@@ -65,8 +79,8 @@ public class MainController {
             @AuthenticationPrincipal User user,
             @Valid Message message,
             BindingResult bindingResult,
-            @Valid Model model,
-            @RequestParam("file") MultipartFile file
+            @Valid Model model
+
 
 
     ) throws IOException {
@@ -74,12 +88,6 @@ public class MainController {
 
 
 
-
-        boolean isFileEmpty = ObjectUtils.isEmpty(file);
-        if(isFileEmpty) {
-            model.addAttribute("fileError", "Text can not be empty");
-
-        }
 
         boolean isTagEmpty = ObjectUtils.isEmpty(message.getTag());
         if(isTagEmpty) {
@@ -89,7 +97,7 @@ public class MainController {
 
 
 
-        if (isFileEmpty|| bindingResult.hasErrors()) {
+        if (bindingResult.hasErrors()) {
 
             Map<String, List<String>> errorsMap = ControllerUtils.getErrors(bindingResult);
 
@@ -100,7 +108,6 @@ public class MainController {
 
             } else {
 
-            saveFile(message, file);
 
 
             model.addAttribute("message", message);
@@ -154,11 +161,13 @@ public class MainController {
             @RequestParam("file") MultipartFile file
 
 
+
     ) throws IOException {
         message.setAuthor(user);
 
 
         boolean isFileEmpty = file.isEmpty();
+
 
 
         if(isFileEmpty) {
@@ -185,8 +194,7 @@ public class MainController {
 
         } else {
 
-            saveFile(message, file);
-
+            uploadFile(message, file);
 
             model.addAttribute("message", message);
 
@@ -206,22 +214,6 @@ public class MainController {
     }
 
 
-    public void saveFile(@Valid Message message, @RequestParam("file") MultipartFile file) throws IOException {
-        if (!file.isEmpty() && !file.getOriginalFilename().isEmpty()) {
-            File uploadDir = new File(uploadPath);
-
-            if (!uploadDir.exists()) {
-                uploadDir.mkdir();
-            }
-
-            String uuidFile = UUID.randomUUID().toString();
-            String resultFilename = uuidFile + "." + file.getOriginalFilename();
-
-            file.transferTo(new File(uploadPath + "/" + resultFilename));
-
-            message.setFilename(resultFilename);
-        }
-    }
 
     @GetMapping("/likes")
     public String myLikes(
@@ -238,6 +230,37 @@ public class MainController {
         model.addAttribute("filter", filter);
 
         return "likes";
+    }
+
+
+    public void uploadFile(@Valid Message message, MultipartFile file){
+
+        File fileObj = convertMultiPartFileToFile(file);
+
+
+        String uuidFile = UUID.randomUUID().toString();
+        String fileName = uuidFile + "." + file.getOriginalFilename();
+
+
+
+
+        s3.putObject(new PutObjectRequest(bucketName, fileName, fileObj));
+        fileObj.delete();
+
+
+        message.setFilename(fileName);
+
+
+    }
+
+    private File convertMultiPartFileToFile(MultipartFile file) {
+        File convertedFile = new File(file.getOriginalFilename());
+        try (FileOutputStream fos = new FileOutputStream(convertedFile)) {
+            fos.write(file.getBytes());
+        } catch (IOException e) {
+            System.out.println(e);
+        }
+        return convertedFile;
     }
 
 
