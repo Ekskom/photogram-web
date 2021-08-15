@@ -9,9 +9,7 @@
             <div class="title">Last step</div>
             <form method="post" enctype="multipart/form-data">
                 <div class="input_wrap">
-
-
-                        <input class="form-control" name="tag" list="datalistOptions" id="exampleDataList" placeholder="Type to search...">
+                        <input class="form-control ${(tagError??)?string('is-invalid', '')}" name="tag" list="datalistOptions" id="exampleDataList" placeholder="Type to search...">
                         <datalist id="datalistOptions">
                         <option name="tag" value="People">
                         <option name="tag" value="Wallpapers">

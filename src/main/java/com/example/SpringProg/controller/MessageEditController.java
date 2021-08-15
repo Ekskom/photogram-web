@@ -83,15 +83,17 @@ public class MessageEditController {
 
         if (isTagEmpty) {
             model.addAttribute("tagError", "Tag can not be empty");
-             return  "user-messages/" + user;
+
         }
+
         boolean isFileEmpty = ObjectUtils.isEmpty(file);
+
         if(isFileEmpty) {
             model.addAttribute("fileError", "File can not be empty");
             return "/user-messages/"+ user;
         }
 
-        if (bindingResult.hasErrors()) {
+        if (isTagEmpty||bindingResult.hasErrors()) {
 
             Map<String, List<String>> errorsMap = ControllerUtils.getErrors(bindingResult);
 
@@ -117,13 +119,25 @@ public class MessageEditController {
 
     @GetMapping("/del-user-messages/{user}")
     public String deleteMessage(
-            @PathVariable Long user,
-            @RequestParam("message") Long messageId
+            @RequestParam("message") Long messageId,
+            RedirectAttributes redirectAttributes,
+            @RequestHeader(required = false) String referer
     ) throws IOException {
+
+
 
         messageRepo.deleteById(messageId);
 
-        return "redirect:/user-messages/" + user;
+
+
+        UriComponents components = UriComponentsBuilder.fromHttpUrl(referer).build();
+
+        components.getQueryParams()
+                .entrySet()
+                .forEach(pair -> redirectAttributes.addAttribute(pair.getKey(), pair.getValue()));
+
+
+        return "redirect:" + components.getPath();
     }
 
     @GetMapping("/messages/{message}/like")

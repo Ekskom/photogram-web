@@ -16,6 +16,9 @@ import org.springframework.util.ObjectUtils;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+import org.springframework.web.util.UriComponents;
+import org.springframework.web.util.UriComponentsBuilder;
 import javax.validation.Valid;
 import java.io.File;
 import java.io.FileOutputStream;
@@ -79,7 +82,9 @@ public class MainController {
             @AuthenticationPrincipal User user,
             @Valid Message message,
             BindingResult bindingResult,
-            @Valid Model model
+            @Valid Model model,
+            RedirectAttributes redirectAttributes,
+            @RequestHeader(required = false) String referer
 
 
 
@@ -127,7 +132,17 @@ public class MainController {
 
         model.addAttribute("tag", message.getTag());
 
-        return "redirect:/main";
+
+
+        UriComponents components = UriComponentsBuilder.fromHttpUrl(referer).build();
+
+        components.getQueryParams()
+                .entrySet()
+                .forEach(pair -> redirectAttributes.addAttribute(pair.getKey(), pair.getValue()));
+
+
+
+        return "redirect:" + components.getPath();
 
     }
 
@@ -192,7 +207,7 @@ public class MainController {
 
             return "aboba";
 
-        } else {
+            } else {
 
             uploadFile(message, file);
 
@@ -200,8 +215,7 @@ public class MainController {
 
             messageRepo.save(message);
 
-
-        }
+            }
 
         Iterable<Message> messages = messageRepo.findAll();
 
