@@ -155,10 +155,9 @@
                 justify-content: center;
                 flex-wrap: wrap;
             }
-            .post-item {
-                padding: 10px;
-            }
+
             .post-item-wrap {
+                margin-bottom: 10px;
                 position: relative;
             }
             .post-item img {
@@ -356,6 +355,7 @@
             .example-2 .input-file + .js-labelFile.has-file .icon:before{content:"\f00c";color:#5AAC7B}
 
             .alert {
+                margin-top: 20px;
                 position: absolute;
                 padding: .75rem 1.25rem;
                 margin-bottom: 1rem;

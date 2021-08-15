@@ -16,7 +16,6 @@
                         <option name="tag" value="Future">
                         <option name="tag" value="Architecture">
                         <option name="tag" value="Other">
-                        <option></option>
                     </select>
                     <#if tagError??>
                         <div class="invalid-feedback">
