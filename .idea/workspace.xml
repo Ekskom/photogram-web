@@ -48,16 +48,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="navbar.ftlh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/parts/navbar.ftlh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="8">
-              <caret line="51" column="36" lean-forward="false" selection-start-line="51" selection-start-column="36" selection-end-line="51" selection-end-column="36" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="MvcConfig.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/example/SpringProg/config/MvcConfig.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -74,18 +64,6 @@
             <state relative-caret-position="-380">
               <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RedirectInterceptor.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/SpringProg/domain/util/RedirectInterceptor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="16" column="5" lean-forward="true" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -110,11 +88,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="common.ftlh" pinned="false" current-in-tab="true">
+      <file leaf-file-name="common.ftlh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/parts/common.ftlh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-410">
-              <caret line="220" column="30" lean-forward="false" selection-start-line="220" selection-start-column="30" selection-end-line="220" selection-end-column="30" />
+            <state relative-caret-position="423">
+              <caret line="161" column="35" lean-forward="false" selection-start-line="161" selection-start-column="35" selection-end-line="161" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="myLikes.ftlh" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/parts/myLikes.ftlh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="445">
+              <caret line="49" column="34" lean-forward="false" selection-start-line="49" selection-start-column="34" selection-end-line="49" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="messageList.ftlh" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/parts/messageList.ftlh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="266">
+              <caret line="14" column="73" lean-forward="false" selection-start-line="14" selection-start-column="73" selection-end-line="14" selection-end-column="73" />
               <folding />
             </state>
           </provider>
@@ -223,12 +221,12 @@
         <option value="$PROJECT_DIR$/src/main/resources/templates/aboba.ftlh" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/SpringProg/controller/MessageEditController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/userList.ftlh" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/parts/messageList.ftlh" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/parts/myLikes.ftlh" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/parts/navbar.ftlh" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/SpringProg/domain/util/RedirectInterceptor.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/SpringProg/controller/MainController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/parts/common.ftlh" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/parts/myLikes.ftlh" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/parts/messageList.ftlh" />
       </list>
     </option>
   </component>
@@ -1381,12 +1379,12 @@
       <workItem from="1628665552392" duration="16613000" />
       <workItem from="1628755358607" duration="7956000" />
       <workItem from="1628763472432" duration="18638000" />
-      <workItem from="1628848892932" duration="41896000" />
+      <workItem from="1628848892932" duration="42141000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="377323000" />
+    <option name="totallyTimeSpent" value="377568000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1767,14 +1765,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/parts/messageList.ftlh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="18" column="59" lean-forward="true" selection-start-line="18" selection-start-column="59" selection-end-line="18" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/SpringProg/controller/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
@@ -1782,14 +1772,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/parts/myLikes.ftlh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="12" column="78" lean-forward="false" selection-start-line="12" selection-start-column="78" selection-end-line="12" selection-end-column="78" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1881,8 +1863,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/parts/common.ftlh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-410">
-          <caret line="220" column="30" lean-forward="false" selection-start-line="220" selection-start-column="30" selection-end-line="220" selection-end-column="30" />
+        <state relative-caret-position="423">
+          <caret line="161" column="35" lean-forward="false" selection-start-line="161" selection-start-column="35" selection-end-line="161" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/parts/myLikes.ftlh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="445">
+          <caret line="49" column="34" lean-forward="false" selection-start-line="49" selection-start-column="34" selection-end-line="49" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/parts/messageList.ftlh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="14" column="73" lean-forward="false" selection-start-line="14" selection-start-column="73" selection-end-line="14" selection-end-column="73" />
           <folding />
         </state>
       </provider>

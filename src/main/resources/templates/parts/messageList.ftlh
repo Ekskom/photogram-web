@@ -12,7 +12,7 @@
                                 <img src="https://my-new-bucket-photogram.s3.amazonaws.com/${message.filename}" class="card-img-top">
                             </#if>
                             <div class="post-info-top">
-                                <#if message.author.id == currentUserId && isAdmin>
+                                <#if message.author.id == currentUserId || isAdmin>
                                     <div class="top-right mt-3">
                                         <a href="/user-messages/${message.author.id}?message=${message.id}"/><i class="far fa-edit"></i></a>
                                     </div>
