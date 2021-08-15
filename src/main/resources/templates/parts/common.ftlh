@@ -336,6 +336,9 @@
                 display: inline-flex!important;
                 margin-right: 84%;
             }
+            .mt-5, .my-5 {
+                margin-top: 7rem!important;
+            }
 
             .navbar{
                 top: 0;

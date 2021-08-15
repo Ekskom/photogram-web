@@ -211,6 +211,15 @@ public class MainController {
 
             uploadFile(message, file);
 
+            Set<User> likes = message.getLikes();
+
+            if(likes.contains(user)){
+                likes.remove(user);
+            } else {
+                likes.add(user);
+            }
+
+
             model.addAttribute("message", message);
 
             messageRepo.save(message);

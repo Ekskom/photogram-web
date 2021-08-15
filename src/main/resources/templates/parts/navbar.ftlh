@@ -63,7 +63,7 @@
                             </a>
                             <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
                                 <a class="dropdown-item" href="/likes">My Likes</a>
-                                <a class="dropdown-item" href="/user-messages/${currentUserId}?">My posts</a>
+                                <a class="dropdown-item" href="/user-messages/${currentUserId}?">My Posts</a>
                                 <a class="dropdown-item" href="/user/profile?">My profile</a>
                                 <form action="/logout" method="post">
                                     <input type="hidden" name="_csrf" value="${_csrf.token}" />

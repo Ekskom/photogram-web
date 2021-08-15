@@ -6,7 +6,7 @@
 
 
     <i class="far fa-user"></i>
-    <h1> ${userChannel.username}</h1>
+    <h6> ${userChannel.username}</h6>
     <div class="container">
         <div class="row">
             <div class="col">

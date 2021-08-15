@@ -3,7 +3,7 @@
 <@c.page>
 
 
-    <h3>${userChannel.username} ${type}</h3>
+    <h1>${userChannel.username} ${type}</h1>
 
     <div class="container">
         <div class="list-group list-group-numbered">

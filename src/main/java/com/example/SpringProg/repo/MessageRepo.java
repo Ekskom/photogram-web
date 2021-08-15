@@ -29,9 +29,6 @@ public interface MessageRepo extends CrudRepository<Message, Long> {
             "group by m")
     List<MessageDto> findByTag(@Param("tag")String tag, @Param("user") User user);
 
-
-
-
     @Query("select new com.example.SpringProg.domain.dto.MessageDto(" +
             "   m, " +
             "   count(ml), " +

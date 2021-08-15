@@ -65,7 +65,7 @@ public class MessageEditController {
         return "userMessages";
     }
 
-    @PostMapping("/user-messages/{user}")
+    @PostMapping("/user-messages/{author}")
     public String updateMessage(
             @AuthenticationPrincipal User currentUser,
             @PathVariable Long user,
