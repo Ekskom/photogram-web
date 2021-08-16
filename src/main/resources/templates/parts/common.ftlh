@@ -279,7 +279,7 @@
                 }
             }
 
-            @media only screen and (max-width : 1400px) {
+            @media only screen and (max-width : 1800px) {
                 .alert {
                     margin-left: 42%;
                     margin-top: 6%;
@@ -296,7 +296,7 @@
 
 
 
-            @media only screen and (max-width : 4000px)
+            @media only screen and (max-width : 2500px)
                 .alert {
                     position: fixed;
                     margin-left: 43%;
