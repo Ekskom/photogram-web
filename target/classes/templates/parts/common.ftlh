@@ -29,10 +29,7 @@
 
 
 
-            .vl {
-                border-left: 1px solid white;
-                height: 40px;
-            }
+
 
             i{
                 font-size: 25px;
@@ -43,44 +40,7 @@
                 transition: .5s;
             }
 
-            h1 {
-                margin-top: 7rem;
-                margin-left: 6.8rem;
-                font-family: 'Comfortaa', sans-serif; /* Гарнитура текста */
-                font-size: 300%; /* Размер шрифта в процентах */
-                color: white;
-            }
 
-            h2 {
-                text-align: left;
-
-            }
-            h5{
-                text-align: left;
-
-                color: white;
-            }
-
-            h3{
-                margin-left: 6.8rem;
-                font-family: 'Comfortaa', sans-serif; /* Гарнитура текста */
-                font-size: 150%; /* Размер шрифта в процентах */
-                color: white;
-            }
-
-
-            h4{
-                font-size: 400%;
-                text-align: center;
-                color: white;
-            }
-            h6{
-                font-size: 400%;
-                text-align: center;
-                color: white;
-                margin-left: 20px;
-
-            }
 
             .fa-user{
                 margin-top: 30px;
@@ -96,14 +56,15 @@
 
             a{
                 font-family: 'Comfortaa', sans-serif;
-                color: grey;
+                color: lightgray;
 
             }
 
-            a:hover{
 
+            a:hover{
                 color: antiquewhite;
                 transition: .5s;
+
             }
 
             a:-webkit-any-link{
@@ -160,6 +121,30 @@
                 margin-bottom: 10px;
                 position: relative;
             }
+
+
+
+
+            .full {
+                display: none;
+                position: fixed;
+                left: 0;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                padding: 8%;
+                background: #CCC center no-repeat;
+                background: rgba(0, 0, 0, 0.5) center no-repeat;
+                background-size: contain;
+                background-origin: content-box;
+            }
+            a:focus + .full {
+                display: block;
+            }
+
+
+
+
             .post-item img {
                 display: block;
                 width: 100%;
@@ -225,6 +210,8 @@
                 font-weight: 600;
                 margin-bottom: 15px;
             }
+
+
             @media (min-width: 768px) {
                 .post-item {
                     flex-basis: 50%;
@@ -236,6 +223,9 @@
                     flex-basis: 33.333333333%;
                 }
             }
+
+
+
 
             .dropdown-menu[data-bs-popper] {
                 top: 100%;
@@ -278,15 +268,143 @@
                 border: 22px solid rgba(0,0,0,-0.85);
                 border-radius: 2.25rem;
             }
-            .card-columns{
-                margin-right: 100px;
-                margin-left: 100px;
+
+            @media only screen and (max-width : 4000px) {
+                .vl {
+                    border-left: 1px solid white;
+                    height: 40px;
+                }
+                .mt-5, .my-5 {
+                    margin-top: 4rem!important;
+                }
+                .card-columns {
+                    margin-right: 100px;
+                    margin-left: 100px;
+                }
+                h1 {
+                    margin-top: 7rem;
+                    margin-left: 6.8rem;
+                    font-family: 'Comfortaa', sans-serif; /* Гарнитура текста */
+                    font-size: 300%; /* Размер шрифта в процентах */
+                    color: white;
+                }
+
+                h2 {
+                    text-align: left;
+
+                }
+                h5{
+                    text-align: left;
+
+                    color: white;
+                }
+
+                h3{
+                    margin-left: 6.8rem;
+                    font-family: 'Comfortaa', sans-serif; /* Гарнитура текста */
+                    font-size: 150%; /* Размер шрифта в процентах */
+                    color: white;
+                }
+
+
+                h4{
+                    font-size: 400%;
+                    text-align: center;
+                    color: white;
+                }
+                h6{
+                    font-size: 400%;
+                    text-align: center;
+                    color: white;
+                    margin-left: 20px;
+
+                }
+                .navbar-nav {
+                    display: -ms-flexbox;
+                    display: flex;
+                    -ms-flex-direction: column;
+                    flex-direction: column;
+                    padding-left: 0;
+                    margin-bottom: 0;
+                    list-style: none;
+                }
+                img[Attributes Style] {
+                width: 100%;
+                height: 600px;
+            }
+            }
+
+            @media only screen and (max-width : 480px) {
+                img[Attributes Style] {
+                width: 100%;
+                height: 300px;
+            }
+                .navbar-nav {
+                    margin-right: 9px;
+                    display: -ms-flexbox;
+                    display: flex;
+                    -ms-flex-direction: column;
+                    flex-direction: column;
+                    padding-left: 0;
+                    margin-bottom: 0;
+                    list-style: none;
+                }
+                .vl {
+                    border-left: 0px solid white;
+                    height: 40px;
+                    margin-left: 267px;
+                }
+                .mt-5, .my-5 {
+                    margin-top: 3rem!important;
+                }
+                .card-columns {
+                    margin-right: 2px;
+                    margin-left: 2px;
+                }
+                h1 {
+                    margin-top: 11rem;
+                    margin-left: 0.8rem;
+                    font-family: 'Comfortaa', sans-serif; /* Гарнитура текста */
+                    font-size: 250% /* Размер шрифта в процентах */
+                    color: white;
+                }
+
+                h2 {
+                    text-align: left;
+
+                }
+                h5{
+                    text-align: left;
+
+                    color: white;
+                }
+
+                h3{
+                    margin-left: 0.8rem;
+                    font-family: 'Comfortaa', sans-serif; /* Гарнитура текста */
+                    font-size: 116%; /* Размер шрифта в процентах */
+                    color: white;
+                }
+
+
+                h4{
+                    font-size: 400%;
+                    text-align: center;
+                    color: white;
+                }
+                h6{
+                    font-size: 400%;
+                    text-align: center;
+                    color: white;
+                    margin-left: 20px;
+
+                }
             }
 
             /*<!-- Form l -->*/
 
             .wrapper{
-                min-height: 70vh;
+                min-height: 90vh;
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -336,9 +454,7 @@
                 display: inline-flex!important;
                 margin-right: 84%;
             }
-            .mt-5, .my-5 {
-                margin-top: 7rem!important;
-            }
+
 
             .navbar{
                 top: 0;

@@ -66,6 +66,21 @@
 
     </#if>
 
+    <#if filter == "Nature">
+        <h1>NATURE</h1>
+        <h3>Let’s celebrate the magic of Mother Earth — with images of everything<br/> our
+            planet has to offer, from stunning seascapes, starry skies, and everything in between.
+        </h3>
+
+    </#if>
+
+    <#if filter == "Cars">
+        <h1>CARS</h1>
+        <h3>Cars produced in the world.
+        </h3>
+
+    </#if>
+
 
     <#include "parts/messageList.ftlh" />
 

@@ -36,6 +36,12 @@
                             <a class="nav-link active" href="/main?filter=Future">Future</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link active" href="/main?filter=Nature">Nature</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="/main?filter=Cars">Cars</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link active" href="/main?filter=Architecture">Architecture</a>
                         </li>
 
@@ -49,7 +55,7 @@
 
 
                 <ul class="navbar-nav">
-                    <a  href="/aboba" role="button">
+                    <a  href="/addPhoto" role="button">
                         Add Photo
                     </a>
                 </ul>
@@ -64,7 +70,7 @@
                             <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
                                 <a class="dropdown-item" href="/likes">My Likes</a>
                                 <a class="dropdown-item" href="/user-messages/${currentUserId}?">My Posts</a>
-                                <a class="dropdown-item" href="/user/profile?">My profile</a>
+                                <a class="dropdown-item" href="/user/profile?">My Profile</a>
                                 <form action="/logout" method="post">
                                     <input type="hidden" name="_csrf" value="${_csrf.token}" />
                                     <button class="btn btn-primary mt-2 ml-3" type="submit"><#if user??>Sign out<#else>Login</#if></button>

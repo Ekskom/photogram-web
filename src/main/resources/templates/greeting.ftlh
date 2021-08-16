@@ -23,7 +23,7 @@
                         <button type="submit" class="btn btn-info ml-2">Search</button>
                     </form>
                 </div>
-                <h5><a  href="login.ftlh">Login</a> to use</h5>
+                <h5><a href="login.ftlh">Login</a> to use</h5>
             </div>
 
     </div>

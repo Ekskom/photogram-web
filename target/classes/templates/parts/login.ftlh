@@ -1,7 +1,7 @@
 <#macro login path isRegisterForm>
     <div class="wrapper">
         <div class="form">
-            <div class="title">Login to Spring</div>
+            <div class="title">Login to Photogram</div>
             <form action="${path}" method="post">
                 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
@@ -11,7 +11,7 @@
                     <div class="input_field">
                         <input type="text" name="username" value="<#if user??>${user.username}</#if>"
                                class="form-control ${(usernameError??)?string('is-invalid', '')}"
-                               id="input_text" required>
+                               id="input_text">
                         <#if usernameError??>
                             <div class="invalid-feedback">
                                 ${usernameError}
@@ -41,7 +41,7 @@
                         <div class="input_field">
                             <input type="password" name="password2"
                                    class="form-control ${(passwordError??)?string('is-invalid', '')}"
-                                   id="input_password2">
+                                   id="input_password2" >
                             <#if password2Error??>
                                 <div class="invalid-feedback">
                                     ${password2Error}
@@ -55,9 +55,9 @@
                         <div class="input_field">
                             <input type="email" name="email"
                                    class="form-control ${(emailError??)?string('Email is-invalid', '')}"
-                                   id="input_email">
+                                   id="input_email" >
                             <#if emailError??>
-                                <div class="invalid-feedback">
+                                <div class="invalid-feedback" >
                                     ${emailError}
                                 </div>
                             </#if>
@@ -83,7 +83,7 @@
                     <div class="input_wrap">
                         <button  type="submit" class="btn btn-primary w-100" ><#if isRegisterForm>Create<#else>Sign In</#if></button>
                     </div>
-                <#if !isRegisterForm> <a href="/registration">Create new user</a></#if>
+                <#if !isRegisterForm> <a class="btn btn-dark" href="/registration">Create new user</a></#if>
             </form>
         </div>
     </div>

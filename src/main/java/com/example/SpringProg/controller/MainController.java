@@ -146,8 +146,8 @@ public class MainController {
 
     }
 
-    @GetMapping("/aboba")
-    public String aboba(
+    @GetMapping("/addPhoto")
+    public String addPhoto(
             @AuthenticationPrincipal User user,
             @RequestParam(required = false, defaultValue = "") String filter,
             Model model
@@ -162,13 +162,13 @@ public class MainController {
         model.addAttribute("filter", filter);
 
 
-        return "aboba";
+        return "addPhoto";
     }
 
 
 
-    @PostMapping("/aboba")
-    public String abobaadd(
+    @PostMapping("/addPhoto")
+    public String addFile(
             @AuthenticationPrincipal User user,
             @Valid Message message,
             BindingResult bindingResult,
@@ -187,7 +187,7 @@ public class MainController {
 
         if(isFileEmpty) {
             model.addAttribute("fileError", "File can not be empty");
-            return "aboba";
+            return "addPhoto";
         }
 
         boolean isTagEmpty = ObjectUtils.isEmpty(message.getTag());
@@ -205,7 +205,7 @@ public class MainController {
             model.mergeAttributes(errorsMap);
             model.addAttribute("message", message);
 
-            return "aboba";
+            return "addPhoto";
 
             } else {
 

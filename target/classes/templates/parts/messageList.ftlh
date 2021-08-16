@@ -8,6 +8,7 @@
                 <div class="image-container" data-id="${message.id}">
                     <div class="post-item">
                         <div class="post-item-wrap">
+
                                 <img src="https://my-new-bucket-photogram.s3.amazonaws.com/${message.filename}" class="card-img-top">
                             <div class="post-info-top">
                                 <#if message.author.id == currentUserId || isAdmin>

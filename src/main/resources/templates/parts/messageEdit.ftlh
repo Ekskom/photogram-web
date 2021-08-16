@@ -5,7 +5,7 @@
         <form method="post" enctype="multipart/form-data">
             <div class="input_wrap">
 
-                <input class="form-control ${(tagError??)?string('is-invalid', '')}" name="tag" list="datalistOptions" id="exampleDataList" placeholder="Type to search...">
+                <input class="form-control ${(tagError??)?string('is-invalid', '')}" name="tag" list="datalistOptions" id="exampleDataList" placeholder="Type to search..." required>
                 <datalist id="datalistOptions">
                     <option name="tag" value="People">
                     <option name="tag" value="Wallpapers">
@@ -24,7 +24,7 @@
             <div class="example-2 ">
                 <div class="form-group">
 
-                    <input type="file" name="file" id="file" class="input-file ${(fileError??)?string('is-invalid', '')}" >
+                    <input type="file" name="file" id="file" class="input-file ${(fileError??)?string('is-invalid', '')}" required >
                     <label for="file" class="btn btn-tertiary js-labelFile" >
                         <i class="icon fa fa-check"></i>
                         <span class="js-fileName">Select photo</span>
