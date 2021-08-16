@@ -1,5 +1,4 @@
-*.class
-*.jar
-target
 .idea
 application.properties
+AmazonConfig
+

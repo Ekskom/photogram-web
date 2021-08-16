@@ -34,11 +34,6 @@ public class MainController {
     @Autowired
     private AmazonS3 s3;
 
-
-    @Value("AKIAXJNB7PKMCJFK2BUH")
-    private String accessKey;
-
-
     @Autowired
     private MessageRepo messageRepo;
 
@@ -111,36 +106,25 @@ public class MainController {
 
             return "main";
 
-            } else {
-
-
+        } else {
 
             model.addAttribute("message", message);
 
             messageRepo.save(message);
 
-
         }
 
         Iterable<Message> messages = messageRepo.findAll();
 
-
-
         model.addAttribute("messages", messages);
 
-
-
         model.addAttribute("tag", message.getTag());
-
-
 
         UriComponents components = UriComponentsBuilder.fromHttpUrl(referer).build();
 
         components.getQueryParams()
                 .entrySet()
                 .forEach(pair -> redirectAttributes.addAttribute(pair.getKey(), pair.getValue()));
-
-
 
         return "redirect:" + components.getPath();
 
@@ -153,14 +137,10 @@ public class MainController {
             Model model
     ) {
 
-
         List<MessageDto> messages = messageService.messageSet(filter, user);
-
-
 
         model.addAttribute("messages", messages);
         model.addAttribute("filter", filter);
-
 
         return "addPhoto";
     }
@@ -177,15 +157,10 @@ public class MainController {
             RedirectAttributes redirectAttributes,
             @RequestHeader(required = false) String referer
 
-
-
     ) throws IOException {
         message.setAuthor(user);
 
-
         boolean isFileEmpty = file.isEmpty();
-
-
 
         if(isFileEmpty) {
             model.addAttribute("fileError", "File can not be empty");
@@ -199,7 +174,6 @@ public class MainController {
 
         }
 
-
         if (isTagEmpty || bindingResult.hasErrors()) {
 
             Map<String, List<String>> errorsMap = ControllerUtils.getErrors(bindingResult);
@@ -209,7 +183,7 @@ public class MainController {
 
             return "addPhoto";
 
-            } else {
+        } else {
 
             uploadFile(message, file);
 
@@ -221,15 +195,13 @@ public class MainController {
                 likes.add(user);
             }
 
-
             model.addAttribute("message", message);
 
             messageRepo.save(message);
 
-            }
+        }
 
         Iterable<Message> messages = messageRepo.findAll();
-
 
         model.addAttribute("messages", messages);
 
@@ -239,13 +211,9 @@ public class MainController {
                 .entrySet()
                 .forEach(pair -> redirectAttributes.addAttribute(pair.getKey(), pair.getValue()));
 
-
-
         return "redirect:" + components.getPath();
 
     }
-
-
 
     @GetMapping("/likes")
     public String myLikes(
@@ -254,9 +222,7 @@ public class MainController {
             @RequestParam(required = false, defaultValue = "") String filter
     ) {
 
-
         Iterable<MessageDto> messages = messageService.messageSet(filter, currentUser);
-
 
         model.addAttribute("messages", messages);
         model.addAttribute("filter", filter);
@@ -264,24 +230,17 @@ public class MainController {
         return "likes";
     }
 
-
-    public void uploadFile(@Valid Message message, MultipartFile file){
+    private void uploadFile(@Valid Message message, MultipartFile file){
 
         File fileObj = convertMultiPartFileToFile(file);
-
 
         String uuidFile = UUID.randomUUID().toString();
         String fileName = uuidFile + "." + file.getOriginalFilename();
 
-
-
-
         s3.putObject(new PutObjectRequest(bucketName, fileName, fileObj));
         fileObj.delete();
 
-
         message.setFilename(fileName);
-
 
     }
 
@@ -294,7 +253,4 @@ public class MainController {
         }
         return convertedFile;
     }
-
-
-
 }
