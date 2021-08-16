@@ -271,7 +271,7 @@
                 .alert {
                     margin-left: 34%;
                     margin-top: 15%;
-                    position: absolute;
+                    position: fixed;
                     padding: .75rem 1.25rem;
                     margin-bottom: 1rem;
                     border: 1px solid transparent;
@@ -283,7 +283,7 @@
                 .alert {
                     margin-left: 42%;
                     margin-top: 6%;
-                    position: absolute;
+                    position: fixed;
                     padding: .75rem 1.25rem;
                     margin-bottom: 1rem;
                     border: 1px solid transparent;
@@ -298,6 +298,7 @@
 
             @media only screen and (max-width : 4000px)
                 .alert {
+                    position: fixed;
                     margin-left: 43%;
                     margin-top: 10%;
                     padding: .75rem 1.25rem;
