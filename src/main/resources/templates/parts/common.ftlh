@@ -105,11 +105,6 @@
 
 
 
-            * {
-                margin: 0;
-                font-family: "Artifakt Element",sans-serif;
-                box-sizing: border-box;
-            }
             .post-wrap {
                 max-width: 1120px;
                 margin: 0 auto;
@@ -270,7 +265,46 @@
                 border-radius: 2.25rem;
             }
 
-            @media only screen and (max-width : 4000px) {
+
+
+            @media only screen and (max-width : 640px) {
+                .alert {
+                    margin-left: 34%;
+                    margin-top: 15%;
+                    position: absolute;
+                    padding: .75rem 1.25rem;
+                    margin-bottom: 1rem;
+                    border: 1px solid transparent;
+                    border-radius: .25rem;
+                }
+            }
+
+            @media only screen and (max-width : 1400px) {
+                .alert {
+                    margin-left: 42%;
+                    margin-top: 6%;
+                    position: absolute;
+                    padding: .75rem 1.25rem;
+                    margin-bottom: 1rem;
+                    border: 1px solid transparent;
+                    border-radius: .25rem;
+                }
+            }
+
+
+
+
+
+
+            @media only screen and (max-width : 4000px)
+                .alert {
+                    margin-left: 43%;
+                    margin-top: 10%;
+                    padding: .75rem 1.25rem;
+                    margin-bottom: 1rem;
+                    border: 1px solid transparent;
+                    border-radius: .25rem;
+                }
                 .vl {
                     border-left: 1px solid white;
                     height: 40px;
@@ -329,13 +363,30 @@
                     margin-bottom: 0;
                     list-style: none;
                 }
+                * {
+                    margin: 0px;
+                    font-family: "Artifakt Element",sans-serif;
+                    box-sizing: border-box;
+                }
 
             }
 
             @media only screen and (max-width : 480px) {
-
+                * {
+                    margin: -3px;
+                    font-family: "Artifakt Element",sans-serif;
+                    box-sizing: border-box;
+                }
+                .alert {
+                    margin-left: 30%;
+                    margin-top: 25%;
+                    padding: .75rem 1.25rem;
+                    margin-bottom: 1rem;
+                    border: 1px solid transparent;
+                    border-radius: .25rem;
+                }
                 .navbar-nav {
-                    margin-right: 9px;
+                    margin-right: -21px;
                     display: -ms-flexbox;
                     display: flex;
                     -ms-flex-direction: column;
@@ -468,14 +519,7 @@
             .example-2 .input-file + .js-labelFile .icon:before{content:"\f093"}
             .example-2 .input-file + .js-labelFile.has-file .icon:before{content:"\f00c";color:#5AAC7B}
 
-            .alert {
-                margin-top: 20px;
-                position: absolute;
-                padding: .75rem 1.25rem;
-                margin-bottom: 1rem;
-                border: 1px solid transparent;
-                border-radius: .25rem;
-            }
+
 
 
 

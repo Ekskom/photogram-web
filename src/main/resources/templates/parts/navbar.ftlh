@@ -73,7 +73,7 @@
                                 <a class="dropdown-item" href="/user/profile?">My Profile</a>
                                 <form action="/logout" method="post">
                                     <input type="hidden" name="_csrf" value="${_csrf.token}" />
-                                    <button class="btn btn-primary mt-2 ml-3" type="submit"><#if user??>Sign out<#else>Login</#if></button>
+                                    <button class="btn btn-primary mt-2 ml-2" type="submit"><#if user??>Sign out<#else>Login</#if></button>
                                 </form>
                             </ul>
                         </li>
