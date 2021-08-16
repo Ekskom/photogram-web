@@ -5,6 +5,7 @@
         <meta charset="UTF-8">
         <title>SpringProg</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="google-site-verification" content="8uQcsddjrpuwVUADXyGOQ1Z9kOgfNvhzRR-FNuF4ZGs" />
         <!-- Bootstrap CSS -->
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/turbolinks/5.2.0/turbolinks.js"></script>
@@ -56,7 +57,7 @@
 
             a{
                 font-family: 'Comfortaa', sans-serif;
-                color: lightgray;
+                color: #6c757d;
 
             }
 
@@ -104,11 +105,6 @@
 
 
 
-            * {
-                margin: 0;
-                font-family: "Artifakt Element",sans-serif;
-                box-sizing: border-box;
-            }
             .post-wrap {
                 max-width: 1120px;
                 margin: 0 auto;
@@ -269,7 +265,61 @@
                 border-radius: 2.25rem;
             }
 
-            @media only screen and (max-width : 4000px) {
+
+
+            @media only screen and (max-width : 640px) {
+                .alert {
+                    position: absolute;
+                    margin-left: 25 %;
+                    margin-top: 3%;
+                    padding: .75rem 1.25rem;
+                    margin-bottom: 1rem;
+                    border: 1px solid transparent;
+                    border-radius: .25rem;
+                }
+            }
+
+            @media only screen and (max-width : 1450px) {
+                .alert {
+                    position: absolute;
+                    margin-left: 40%;
+                    margin-top: 3%;
+                    padding: .75rem 1.25rem;
+                    margin-bottom: 1rem;
+                    border: 1px solid transparent;
+                    border-radius: .25rem;
+                }
+            }
+
+            @media only screen and (max-width : 770px) {
+                .alert {
+                    position: absolute;
+                    margin-left: 36%;
+                    margin-top: 3%;
+                    padding: .75rem 1.25rem;
+                    margin-bottom: 1rem;
+                    border: 1px solid transparent;
+                    border-radius: .25rem;
+                }
+            }
+            @media only screen and (max-width : 1650px) {
+                .alert {
+                    position: absolute;
+                    margin-left: 43%;
+                    margin-top: 3%;
+                    padding: .75rem 1.25rem;
+                    margin-bottom: 1rem;
+                    border: 1px solid transparent;
+                    border-radius: .25rem;
+                }
+            }
+
+
+
+
+
+
+
                 .vl {
                     border-left: 1px solid white;
                     height: 40px;
@@ -328,19 +378,30 @@
                     margin-bottom: 0;
                     list-style: none;
                 }
-                img[Attributes Style] {
-                width: 100%;
-                height: 600px;
-            }
+                * {
+                    margin: 0px;
+                    font-family: "Artifakt Element",sans-serif;
+                    box-sizing: border-box;
+                }
+
             }
 
             @media only screen and (max-width : 480px) {
-                img[Attributes Style] {
-                width: 100%;
-                height: 300px;
-            }
+                * {
+                    margin: -3px;
+                    font-family: "Artifakt Element",sans-serif;
+                    box-sizing: border-box;
+                }
+                .alert {
+                    margin-left: 30%;
+                    margin-top: 25%;
+                    padding: .75rem 1.25rem;
+                    margin-bottom: 1rem;
+                    border: 1px solid transparent;
+                    border-radius: .25rem;
+                }
                 .navbar-nav {
-                    margin-right: 9px;
+                    margin-right: -21px;
                     display: -ms-flexbox;
                     display: flex;
                     -ms-flex-direction: column;
@@ -473,14 +534,7 @@
             .example-2 .input-file + .js-labelFile .icon:before{content:"\f093"}
             .example-2 .input-file + .js-labelFile.has-file .icon:before{content:"\f00c";color:#5AAC7B}
 
-            .alert {
-                margin-top: 20px;
-                position: absolute;
-                padding: .75rem 1.25rem;
-                margin-bottom: 1rem;
-                border: 1px solid transparent;
-                border-radius: .25rem;
-            }
+
 
 
 

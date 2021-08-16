@@ -81,6 +81,16 @@
 
     </#if>
 
+ <#if filter == "Food & Drink">
+        <h1>Food & Drink</h1>
+     <h3>Is there anything better than an ice cold drink on a hot summer day?<br/>
+            We don’t think so. That’s why Jarritos Soda is taking over the Food & Drink
+            Topic for<br/>  the month of August. From poolside party snacks to picnics on the
+            beach — submit your photos to the Food & Drink Topic for a chance to be featured.
+        </h3>
+
+    </#if>
+
 
     <#include "parts/messageList.ftlh" />
 

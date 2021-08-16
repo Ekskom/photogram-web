@@ -1,7 +1,11 @@
 <#import "parts/common.ftlh" as c>
 <#import "parts/login.ftlh" as l>
 
-<@c.page>
+
+
+
+
+    <@c.page>
     <#if RequestParameters.error??>
         <div class="alert alert-danger" role="alert">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-exclamation-triangle-fill flex-shrink-0 me-2" viewBox="0 0 16 16" role="img" aria-label="Warning:">
@@ -15,4 +19,8 @@
         </div>
     </#if>
     <@l.login "/login" false/>
+
+
+
+
 </@c.page>

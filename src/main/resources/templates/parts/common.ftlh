@@ -57,7 +57,7 @@
 
             a{
                 font-family: 'Comfortaa', sans-serif;
-                color: lightgray;
+                color: #6c757d;
 
             }
 
@@ -269,9 +269,9 @@
 
             @media only screen and (max-width : 640px) {
                 .alert {
-                    margin-left: 34%;
-                    margin-top: 15%;
-                    position: fixed;
+                    position: absolute;
+                    margin-left: 25 %;
+                    margin-top: 3%;
                     padding: .75rem 1.25rem;
                     margin-bottom: 1rem;
                     border: 1px solid transparent;
@@ -279,11 +279,11 @@
                 }
             }
 
-            @media only screen and (max-width : 1800px) {
+            @media only screen and (max-width : 1450px) {
                 .alert {
-                    margin-left: 42%;
-                    margin-top: 6%;
-                    position: fixed;
+                    position: absolute;
+                    margin-left: 40%;
+                    margin-top: 3%;
                     padding: .75rem 1.25rem;
                     margin-bottom: 1rem;
                     border: 1px solid transparent;
@@ -291,21 +291,35 @@
                 }
             }
 
-
-
-
-
-
-            @media only screen and (max-width : 2500px)
+            @media only screen and (max-width : 770px) {
                 .alert {
-                    position: fixed;
+                    position: absolute;
+                    margin-left: 36%;
+                    margin-top: 3%;
+                    padding: .75rem 1.25rem;
+                    margin-bottom: 1rem;
+                    border: 1px solid transparent;
+                    border-radius: .25rem;
+                }
+            }
+            @media only screen and (max-width : 1650px) {
+                .alert {
+                    position: absolute;
                     margin-left: 43%;
-                    margin-top: 10%;
+                    margin-top: 3%;
                     padding: .75rem 1.25rem;
                     margin-bottom: 1rem;
                     border: 1px solid transparent;
                     border-radius: .25rem;
                 }
+            }
+
+
+
+
+
+
+
                 .vl {
                     border-left: 1px solid white;
                     height: 40px;

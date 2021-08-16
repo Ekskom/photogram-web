@@ -173,7 +173,9 @@ public class MainController {
             @Valid Message message,
             BindingResult bindingResult,
             @Valid Model model,
-            @RequestParam("file") MultipartFile file
+            @RequestParam("file") MultipartFile file,
+            RedirectAttributes redirectAttributes,
+            @RequestHeader(required = false) String referer
 
 
 
@@ -231,8 +233,15 @@ public class MainController {
 
         model.addAttribute("messages", messages);
 
+        UriComponents components = UriComponentsBuilder.fromHttpUrl(referer).build();
 
-        return "redirect:/main";
+        components.getQueryParams()
+                .entrySet()
+                .forEach(pair -> redirectAttributes.addAttribute(pair.getKey(), pair.getValue()));
+
+
+
+        return "redirect:" + components.getPath();
 
     }
 

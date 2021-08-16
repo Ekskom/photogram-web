@@ -44,6 +44,9 @@
                         <li class="nav-item">
                             <a class="nav-link active" href="/main?filter=Architecture">Architecture</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="/main?filter=Food & Drink">Food & Drink</a>
+                        </li>
 
                         <#if isAdmin>
                             <li class="nav-item">

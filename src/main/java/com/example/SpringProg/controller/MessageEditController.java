@@ -73,7 +73,9 @@ public class MessageEditController {
             @Valid Model model,
             @RequestParam(value = "id") Message id,
             @RequestParam("tag") String tag,
-            @RequestParam("file") MultipartFile file
+            @RequestParam("file") MultipartFile file,
+            RedirectAttributes redirectAttributes,
+            @RequestHeader(required = false) String referer
     ) throws IOException {
 
 
@@ -111,8 +113,13 @@ public class MessageEditController {
 
                 messageRepo.save(id);
             }
+        UriComponents components = UriComponentsBuilder.fromHttpUrl(referer).build();
 
-            return "redirect:/user-messages/" + user;
+        components.getQueryParams()
+                .entrySet()
+                .forEach(pair -> redirectAttributes.addAttribute(pair.getKey(), pair.getValue()));
+
+            return "redirect:" + components.getPath() + user;
 
     }
 
@@ -123,11 +130,7 @@ public class MessageEditController {
             @RequestHeader(required = false) String referer
     ) throws IOException {
 
-
-
         messageRepo.deleteById(messageId);
-
-
 
         UriComponents components = UriComponentsBuilder.fromHttpUrl(referer).build();
 

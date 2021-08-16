@@ -1,13 +1,14 @@
 <#import "parts/common.ftlh" as c>
 
 <@c.page>
-User editor
+
+    <h3 class="mt-3">User editor</h3>
 
 <form action="/user" method="post">
     <input type="text" name="username" value="${user.username}">
     <#list roles as role>
         <div>
-            <label><input type="checkbox" name="${role}" ${user.roles?seq_contains(role)?string("checked", "")} />${role}</label>
+            <label><input type="checkbox" name="${role}" ${user.roles?seq_contains(role)?string("checked", "")} /><h3>${role}</h3></label>
         </div>
     </#list>
     <input type="hidden" value="${user.id}" name="userId">

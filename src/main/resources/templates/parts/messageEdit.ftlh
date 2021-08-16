@@ -1,4 +1,6 @@
 
+
+
 <div class="wrapper mb-5">
     <div class="form mb-5">
         <div class="title">Edit photo</div>
